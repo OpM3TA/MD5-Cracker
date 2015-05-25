@@ -6,11 +6,14 @@ def encrypt(s):
     md5.update(s)
     return md5.hexdigest()
 
+# For the following methods for reading the wordlist, I suggest doing something besides reading
+# the file into a 1 list, depending on its size. 
 def readfile(f): 
     l = open(f,'r')
     data = l.readlines()
     l.close()
     return data
+
 
 def readcsv(f):
     l = open(f, 'r')
